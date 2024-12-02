@@ -1,9 +1,5 @@
 name: TS
 
-defaults:
-  run:
-    working-directory: ts/
-    
 on:
   push:
     branches: [ "main" ]
@@ -12,13 +8,13 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: ./ts
     strategy:
       matrix:
         node-version: [22.x]
-        
     steps:
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
@@ -26,6 +22,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        package_json_file: ts/package.json
     - run: npm ci
-
     - run: npm test
