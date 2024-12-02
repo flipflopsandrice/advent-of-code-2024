@@ -1,5 +1,9 @@
 name: TS
 
+defaults:
+  run:
+    working-directory: ts/
+    
 on:
   push:
     branches: [ "main" ]
