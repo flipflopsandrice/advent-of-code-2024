@@ -11,17 +11,17 @@ $ nvm install
 $ nvm use
 
 # Install dependencies
-$ yarn install
+$ npm install
 
 ```
 
 
 ## Run tests
 
-Run the tests with `yarn test`.
+Run the tests with `npm test`.
 
 ```bash
 
-$ yarn test
+$ npm test
 
 ```
