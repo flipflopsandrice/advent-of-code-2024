@@ -3,10 +3,10 @@ name: TS
 on:
   push:
     branches: [ "main" ]
-    paths: [".github/workflows/node.js.yaml", "ts/**"]
+    paths: [".github/workflows/node.js.yml", "ts/**"]
   pull_request:
     branches: [ "main" ]
-    paths: [".github/workflows/node.js.yaml", "ts/**"]
+    paths: [".github/workflows/node.js.yml", "ts/**"]
 
 jobs:
   build:
